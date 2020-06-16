@@ -1,0 +1,17 @@
+[
+  {
+    "path": "posts/2020-06-15-what-is-an-asset/",
+    "title": "What is an Asset?",
+    "description": "brief concept of Assets",
+    "author": [
+      {
+        "name": "Daniel Jachetta",
+        "url": "h"
+      }
+    ],
+    "date": "2020-06-15",
+    "categories": [],
+    "preview": "posts/2020-06-15-what-is-an-asset/distill-preview.png",
+    "last_modified": "2020-06-15T21:13:39-05:00"
+  }
+]
