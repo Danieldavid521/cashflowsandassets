@@ -1,0 +1,69 @@
+---
+title: "What is an Asset?"
+description: 
+  brief concept of Assets
+author:
+  - name: Daniel Jachetta
+    url: h
+date: 06-15-2020
+css: styles.css
+output:
+  distill::distill_article:
+    self_contained: TRUE
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+```{r}
+library(ggplot2)
+classification <- c("assets", "liabilities")
+amount <- c(85, 15)
+assets<- data.frame(amount, classification)
+
+ggplot(assets, aes(x = classification, y = amount, fill = classification)) + 
+  geom_bar(stat='identity')  + 
+  scale_fill_manual(values=c("#669933", "#FF0000"))+ 
+  geom_text(aes(label=classification), vjust=1.5, colour="white", position=position_dodge(.9), size=9) + 
+  theme_dark() +
+  labs(title = "Good Portfolio Management") + 
+  xlab("classification") + 
+  ylab("Amount of porfolio percentage")
+
+classification <- c("assets", "liabilities")
+amount <- c(15, 85)
+assets <- data.frame(amount, classification)
+
+ggplot(assets, aes(x = classification, y = amount, fill = classification)) + 
+  geom_bar(stat='identity')  + 
+  scale_fill_manual(values=c("#669933", "#FF0000"))+ 
+  geom_text(aes(label=classification), vjust=1.5, colour="white", position=position_dodge(.9), size=9) + 
+  theme_dark() +
+  labs(title = "Bad Porfolio Management") + 
+  xlab("classification") + 
+  ylab("Amount of porfolio percentage")
+```
+
+
+As long as we are on this blogsite, we will speak of assets in terms of financial matters. Yes, your family can be an asset to your life, you might even consider your favorite pillow an asset, but for this site, assets will be strictly financial.
+
+Over the last few years of learning about finances and investing, I have came across 2 similar definitions of what I believe is the definition of an asset. The explicit definition that you use for the term "Asset", controls how you handle and think about money. If you decide that an asset is "something that has value", then we can be talking about your favorite pillow again, because it has value to you, but you can't put your pillow on to your balance sheet!
+
+The first definintion of "Asset" that I really liked and had expanded my financial understanding is the one from one of my favorite finance mentors, is from [Robert Kiyosaki(https://en.wikipedia.org/wiki/Robert_Kiyosaki) where he says:
+
+> "an asset puts money in my pocket" - *Robert Kiyosaki* (Rich Dad Poor Dad book)
+
+This is an amazing way to think about an asset. This is the fundamental thought when people say "Let your money work for you". A simple example of this definition is owning a rental property and finding tenants.
+
+The best definition of an asset that I have found goes a bit further than Robert's, because it explains how the asset works. MIT courseware is open source MIT classes that can be found online. I made myself watch an entire semesters worth of [MIT 15.401 Finance Theory I, Fall 2008](https://ocw.mit.edu/courses/sloan-school-of-management/15-401-finance-theory-i-fall-2008/), with Professor [Andrew Lo](https://en.wikipedia.org/wiki/Andrew_Lo), Professor Lo's definition of an asset is from a business perspective:
+
+> "an asset is a sequence of future cashflows" - *Professor Lo* (MIT 15.401 Finance Theory I 2008)
+
+I believe this takes Robert's definition of an asset and expands on it. An example of this is owning a stock that pays dividends. If you purchased a preferred stock, you will have a higher precedence in receiving future cashflows in the form of dividends. Professor Lo uses this definition of an asset when analyzing net present value(NPV) and other opportunity costs.
+
+If we strictly use these definitions of what an asset is, then just plain cash is NOT an asset. However, you can use that cash and sell put options for premium, and create a stream of cashflow. Even if you Bought low and sold high a brick of gold, I would argue that the gold was not really an asset since you had to sell it to make money, an asset makes money on it's own.
+
+This was just an introduction into my cashflows and assets blog. There will be more to come on these topics!
+

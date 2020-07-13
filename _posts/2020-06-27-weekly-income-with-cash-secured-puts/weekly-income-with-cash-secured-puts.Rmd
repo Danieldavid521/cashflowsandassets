@@ -1,0 +1,45 @@
+---
+title: "Weekly Income Selling Cash Secured Puts"
+description: |
+  Selling Stock Options For Cashflow
+author:
+  - name: Daniel Jachetta
+    url: h
+date: 06-27-2020
+css: styles.css
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+*This blog post assumes you have basic understanding of writing put options for premium.*
+
+```{r}
+library(ggplot2)
+library(cowplot)
+library(magick)
+ggdraw() +
+  draw_image("csp.PNG") 
+```
+
+
+
+The colored table above is a stock option profit calculator generated from [optionsprofitcalculator.com](https://www.optionsprofitcalculator.com/). This is a visualization tool for us to see the potential pay off of taking this position at this time that we wouldn't see otherwise. the profit table was generated after market close on June 26th, 2020. The table is a screenshot for selling the $42 put on for July 17th 2020 expiration for ExxonMobil stock. The numbers in each cell is the return on investment percentage. Since this is a *cash secured put* at the $42 strike price, we will need $4,200. With a 2.87% return on our money, we get a *credit* of 4200 * .0287 = $117.00. (plus fees and commission).
+
+
+When selling options for premium*(cashflow)*, we have theta decay on our side, decaying option premium after each market day. Typically when you buy something, you want it to go **UP** in value, but since we are selling, we want to this to go **DOWN** in value, and expire worthless, or "out of the money".
+
+Below is an overly simplified visualization explaining how an option price loses it's value has time until expiration reaches 0.
+
+
+```{r}
+ggdraw() +
+  draw_image("thetadecay.PNG") 
+```
+
+At the end of the last trading day, our option is either in the money, or out of the money. If the stock has fallen below our strike price, The broker will exchange our $4,200 for 100 shares Exxonmobil stock. The only thing to do now is to sell a covered call, collect the premium and continue the "Wheel of Fortune" options trading strategy.
+
