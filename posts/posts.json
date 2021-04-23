@@ -1,5 +1,20 @@
 [
   {
+    "path": "posts/2021-04-22-Waterfall-Charts/",
+    "title": "Using Waterfall chart in R for Personal Finance",
+    "description": "Waterfall chart dataviz",
+    "author": [
+      {
+        "name": "Danieldavid521",
+        "url": "h"
+      }
+    ],
+    "date": "2021-04-23",
+    "categories": [],
+    "preview": "posts/2021-04-22-Waterfall-Charts/distill-preview.png",
+    "last_modified": "2021-04-23T10:30:25-05:00"
+  },
+  {
     "path": "posts/2020-06-27-weekly-income-with-cash-secured-puts/",
     "title": "Weekly Income Selling Cash Secured Puts",
     "description": "Selling Stock Options For Cashflow",

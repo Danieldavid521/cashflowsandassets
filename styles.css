@@ -3,7 +3,12 @@
   background-color: #659D32;
 }
 
-  .distill-site-nav a:hover {
+.distill-site-nav a:hover {
     color: black;
   }
   
+html body.layout-listing d-article {
+  background-color: #ffd59a;
+}
+  
+
